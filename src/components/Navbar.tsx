@@ -101,7 +101,7 @@ export function Navbar() {
                 aria-current={isActive(item.href) ? "page" : undefined}
                 className="flex items-center justify-between py-5"
               >
-                <span className={`font-display text-2xl ${isActive(item.href) ? "text-white" : "text-white/70"}`}>{item.label}</span>
+                <span className={`text-2xl font-medium ${isActive(item.href) ? "text-white" : "text-white/70"}`}>{item.label}</span>
                 <ArrowRight className="h-5 w-5 text-mist" aria-hidden="true" />
               </Link>
             </li>
@@ -118,7 +118,7 @@ export function Navbar() {
             <WhatsAppIcon className="h-5 w-5" />
             Écrire sur WhatsApp
           </a>
-          <p className="text-center font-mono text-xs text-mist">{siteConfig.whatsapp.display}</p>
+          <p className="text-center text-xs text-mist">{siteConfig.whatsapp.display}</p>
         </div>
       </div>
     </header>

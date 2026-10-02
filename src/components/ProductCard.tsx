@@ -17,13 +17,13 @@ export function ProductCard({ product }: { product: Product }) {
       <div className="relative flex aspect-[16/10] items-center sm:aspect-[5/4] justify-center bg-gradient-to-b from-[#0f2038] to-deep">
         <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
           {product.condition && (
-            <span className="rounded-full border border-white/10 bg-ink/70 px-2.5 py-1 font-mono text-[0.65rem] tracking-wide text-white/90 backdrop-blur">
+            <span className="rounded-full border border-white/10 bg-ink/70 px-2.5 py-1 text-[0.65rem] tracking-wide text-white/90 backdrop-blur">
               {product.condition}
             </span>
           )}
         </div>
         {!available && (
-          <span className="absolute top-3 right-3 rounded-full bg-white/10 px-2.5 py-1 font-mono text-[0.65rem] tracking-wide text-mist">Bientôt</span>
+          <span className="absolute top-3 right-3 rounded-full bg-white/10 px-2.5 py-1 text-[0.65rem] tracking-wide text-mist">Bientôt</span>
         )}
         <ProductVisual
           kind={product.visual}
@@ -35,10 +35,10 @@ export function ProductCard({ product }: { product: Product }) {
       </div>
 
       <div className="flex flex-1 flex-col p-5">
-        <p className="font-mono text-[0.68rem] tracking-[0.14em] text-cyan uppercase">
+        <p className="text-[0.68rem] tracking-[0.14em] text-cyan uppercase">
           {category?.singular} · {product.brand}
         </p>
-        <h3 className="mt-2 text-lg leading-snug font-semibold text-white">{product.name}</h3>
+        <h3 className="mt-2 font-display text-lg leading-snug font-semibold text-white">{product.name}</h3>
         <ul className="mt-3 flex flex-wrap gap-1.5" aria-label="Caractéristiques">
           {product.specs.map((spec) => (
             <li key={spec} className="rounded-md bg-white/[0.04] px-2 py-1 text-xs text-mist ring-1 ring-white/[0.06]">
@@ -50,7 +50,7 @@ export function ProductCard({ product }: { product: Product }) {
         <div className="mt-auto pt-5">
           <p className="mb-4 flex items-baseline justify-between gap-2">
             {product.price !== undefined ? (
-              <span className="font-mono text-lg font-semibold text-white">{formatPrice(product.price)}</span>
+              <span className="text-lg font-bold tabular-nums text-white">{formatPrice(product.price)}</span>
             ) : (
               <span className="text-sm font-semibold text-white/90">Nous contacter</span>
             )}

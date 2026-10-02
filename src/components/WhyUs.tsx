@@ -37,7 +37,7 @@ export function WhyUs() {
             <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-cyan/20 bg-cyan/[0.06] text-cyan">
               <Icon className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />
             </span>
-            <h3 className="mt-6 text-base font-semibold text-white">{title}</h3>
+            <h3 className="mt-6 font-display text-lg font-semibold text-white">{title}</h3>
             <p className="mt-2 text-sm leading-relaxed text-mist">{text}</p>
           </Reveal>
         ))}

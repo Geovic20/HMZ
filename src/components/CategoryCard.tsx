@@ -22,7 +22,7 @@ export function CategoryCard({ category }: { category: Category }) {
         />
       </div>
       <div className="mt-5 flex flex-1 flex-col">
-        <h3 className="font-display text-lg font-medium text-white">{category.name}</h3>
+        <h3 className="font-display text-lg font-semibold text-white">{category.name}</h3>
         <p className="mt-2 flex-1 text-sm leading-relaxed text-mist">{category.description}</p>
         <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-white transition-colors group-hover:text-cyan">
           Voir les {category.name.toLowerCase()}

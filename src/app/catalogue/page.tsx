@@ -33,7 +33,7 @@ export default async function CataloguePage() {
 
         <aside className="mt-16 flex flex-col items-start gap-6 rounded-[2rem] border border-line bg-panel/50 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-10">
           <div>
-            <h2 className="font-display text-xl text-white sm:text-2xl">Vous ne trouvez pas votre modèle ?</h2>
+            <h2 className="font-display text-xl font-bold text-white sm:text-2xl">Vous ne trouvez pas votre modèle ?</h2>
             <p className="mt-2 text-sm text-mist">Nous recevons de nouveaux appareils chaque semaine. Dites-nous ce que vous cherchez.</p>
           </div>
           <ButtonLink

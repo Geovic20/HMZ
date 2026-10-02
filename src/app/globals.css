@@ -11,9 +11,8 @@
   --color-mist: #a7b0be;
   --color-whatsapp: #25d366;
 
-  --font-display: var(--font-unbounded), ui-sans-serif, system-ui, sans-serif;
-  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 
   --animate-pulse-rail: pulse-rail 3.2s cubic-bezier(0.6, 0, 0.4, 1) infinite;
 
@@ -83,11 +82,11 @@
     }
   }
 
-  /* Petite étiquette technique, en mono, utilisée comme surtitre. */
+  /* Surtitre de section. */
   .eyebrow {
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    letter-spacing: 0.14em;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--color-cyan);
   }

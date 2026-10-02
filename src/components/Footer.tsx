@@ -21,7 +21,7 @@ export function Footer() {
           <p className="mt-5 text-sm leading-relaxed text-mist">
             Téléphones, tablettes, accessoires et véhicules à Cotonou. Achat, troc et livraison partout au Bénin.
           </p>
-          <p className="mt-6 font-display text-lg text-white">
+          <p className="mt-6 font-display text-lg font-semibold text-white">
             La qualité, <span className="text-cyan">notre priorité !</span>
           </p>
         </div>
@@ -58,7 +58,7 @@ export function Footer() {
               className="flex items-center gap-2 text-white/80 transition-colors hover:text-whatsapp"
             >
               <WhatsAppIcon className="h-4 w-4 shrink-0 text-whatsapp" />
-              <span className="font-mono">{whatsapp.display}</span>
+              <span className="">{whatsapp.display}</span>
             </a>
           </address>
           {activeSocials.length > 0 && (
@@ -86,7 +86,7 @@ export function Footer() {
       <div className="border-t border-white/[0.06]">
         <div className="container-x flex flex-col gap-2 py-6 text-xs text-mist sm:flex-row sm:items-center sm:justify-between">
           <p>© {year} {siteConfig.name}. Tous droits réservés.</p>
-          <p className="font-mono">Cotonou · Bénin</p>
+          <p className="">Cotonou · Bénin</p>
         </div>
       </div>
     </footer>

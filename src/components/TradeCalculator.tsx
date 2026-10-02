@@ -66,14 +66,14 @@ export function TradeCalculator({ offers, defaultCurrent, defaultDesired }: Trad
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="eyebrow">Complément estimatif</p>
-              <p className="mt-3 font-mono text-[2.2rem] leading-none min-[400px]:text-[2.6rem] font-semibold tracking-tight text-white sm:text-6xl">
+              <p className="mt-3 text-[2.2rem] leading-none font-bold tabular-nums tracking-[-0.02em] min-[400px]:text-[2.6rem] text-white sm:text-6xl">
                 {formatPrice(offer.supplement)}
               </p>
               <p className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-mist">
                 <span>
                   {current} <span className="text-cyan">→</span> {desired}
                 </span>
-                <span className="rounded-full bg-white/[0.06] px-2 py-0.5 font-mono text-[0.65rem] tracking-wide whitespace-nowrap uppercase">
+                <span className="rounded-full bg-white/[0.06] px-2 py-0.5 text-[0.65rem] tracking-wide whitespace-nowrap uppercase">
                   Données de démonstration
                 </span>
               </p>
@@ -95,7 +95,7 @@ export function TradeCalculator({ offers, defaultCurrent, defaultDesired }: Trad
                 <MessageCircleQuestion className="h-5 w-5" aria-hidden="true" />
               </span>
               <div>
-                <p className="font-display text-lg text-white sm:text-xl">
+                <p className="font-display text-lg font-semibold text-white sm:text-xl">
                   {sameModel ? "Choisissez un modèle différent de votre téléphone actuel." : "Cette combinaison n'est pas encore disponible."}
                 </p>
                 {!sameModel && (
@@ -140,7 +140,7 @@ function ModelSelect({ id, step, label, hint, value, options, onChange }: ModelS
   return (
     <div className="p-6 sm:p-8">
       <div className="flex items-center gap-3">
-        <span className="flex h-7 w-7 items-center justify-center rounded-full border border-line font-mono text-xs text-mist" aria-hidden="true">
+        <span className="flex h-7 w-7 items-center justify-center rounded-full border border-line text-xs text-mist" aria-hidden="true">
           {step}
         </span>
         <label htmlFor={id} className="text-sm font-semibold text-white">
@@ -153,7 +153,7 @@ function ModelSelect({ id, step, label, hint, value, options, onChange }: ModelS
           id={id}
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          className="h-14 w-full cursor-pointer appearance-none rounded-2xl border border-line bg-ink pr-12 pl-5 font-display text-base text-white transition-colors hover:border-white/20 focus:border-cyan/60 focus:outline-none sm:text-lg"
+          className="h-14 w-full cursor-pointer appearance-none rounded-2xl border border-line bg-ink pr-12 pl-5 font-display text-base font-semibold text-white transition-colors hover:border-white/20 focus:border-cyan/60 focus:outline-none sm:text-lg"
         >
           {options.map((o) => (
             <option key={o.value} value={o.value}>

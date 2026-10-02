@@ -37,7 +37,7 @@ export function LocationSection() {
         <div className="flex flex-col gap-8 border-t border-line p-6 sm:p-10 lg:border-t-0 lg:border-l">
           <div>
             <p className="eyebrow mb-3 !text-mist">Adresse</p>
-            <p className="flex items-start gap-3 font-display text-xl text-white sm:text-2xl">
+            <p className="flex items-start gap-3 font-display text-xl font-semibold text-white sm:text-2xl">
               <MapPin className="mt-1 h-5 w-5 shrink-0 text-cyan" aria-hidden="true" />
               {address}
             </p>
@@ -51,7 +51,7 @@ export function LocationSection() {
                     <Clock className="h-4 w-4 text-mist" aria-hidden="true" />
                     {h.days}
                   </span>
-                  <span className="font-mono text-mist">{h.time}</span>
+                  <span className="text-mist">{h.time}</span>
                 </li>
               ))}
             </ul>
@@ -99,7 +99,7 @@ function MapPlaceholder({ label }: { label: string }) {
           <span className="h-3.5 w-3.5 rounded-full bg-white" />
         </span>
       </div>
-      <span className="absolute bottom-4 left-4 rounded-full border border-white/10 bg-ink/70 px-3 py-1.5 font-mono text-[0.7rem] text-mist backdrop-blur">
+      <span className="absolute bottom-4 left-4 rounded-full border border-white/10 bg-ink/70 px-3 py-1.5 text-[0.7rem] text-mist backdrop-blur">
         Hamza Tech Store · Cotonou
       </span>
     </div>

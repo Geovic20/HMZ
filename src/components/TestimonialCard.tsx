@@ -12,7 +12,7 @@ export function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
       </div>
       <blockquote className="mt-5 flex-1 text-[0.95rem] leading-relaxed text-white/90">« {comment} »</blockquote>
       <figcaption className="mt-6 flex items-center gap-3 border-t border-line pt-5">
-        <span aria-hidden="true" className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-electric to-cyan font-display text-sm text-ink">
+        <span aria-hidden="true" className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-electric to-cyan font-display text-sm font-bold text-ink">
           {firstName.charAt(0)}
         </span>
         <span className="min-w-0">
@@ -20,7 +20,7 @@ export function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
             {firstName}
             {city && <span className="font-normal text-mist"> · {city}</span>}
           </span>
-          {context && <span className="block truncate font-mono text-[0.7rem] text-mist">{context}</span>}
+          {context && <span className="block truncate text-[0.7rem] text-mist">{context}</span>}
         </span>
       </figcaption>
     </figure>

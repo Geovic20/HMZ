@@ -26,7 +26,7 @@ export function TradeRail({ steps, className = "" }: { steps: [TradeRailStep, Tr
           }`}
         >
           <span
-            className={`relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border font-mono text-xs sm:order-first sm:mb-1 ${
+            className={`relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border text-xs sm:order-first sm:mb-1 ${
               step.highlight ? "border-cyan/50 bg-ink text-cyan" : "border-line bg-ink text-mist"
             }`}
             aria-hidden="true"
@@ -35,8 +35,8 @@ export function TradeRail({ steps, className = "" }: { steps: [TradeRailStep, Tr
           </span>
           {step.visual && <div className="hidden h-28 w-28 sm:block">{step.visual}</div>}
           <div className="min-w-0">
-            <p className="font-mono text-[0.68rem] tracking-[0.14em] text-mist uppercase">{step.label}</p>
-            <p className={`mt-1 font-display text-base font-medium sm:text-lg ${step.highlight ? "text-cyan" : "text-white"}`}>{step.value}</p>
+            <p className="text-[0.68rem] tracking-[0.14em] text-mist uppercase">{step.label}</p>
+            <p className={`mt-1 font-display text-base font-semibold sm:text-lg ${step.highlight ? "text-cyan" : "text-white"}`}>{step.value}</p>
           </div>
         </li>
       ))}

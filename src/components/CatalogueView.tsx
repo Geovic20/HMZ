@@ -99,7 +99,7 @@ export function CatalogueView({ products, categories }: CatalogueViewProps) {
                 }`}
               >
                 {tab.name}
-                <span className={`font-mono text-[0.7rem] ${selected ? "text-ink/60" : "text-mist"}`}>{counts[tab.id] ?? 0}</span>
+                <span className={`text-[0.7rem] ${selected ? "text-ink/60" : "text-mist"}`}>{counts[tab.id] ?? 0}</span>
               </button>
             );
           })}
@@ -173,7 +173,7 @@ export function CatalogueView({ products, categories }: CatalogueViewProps) {
           </ul>
         ) : (
           <div className="flex flex-col items-center rounded-3xl border border-dashed border-line px-6 py-16 text-center">
-            <p className="font-display text-xl text-white">Aucun produit ne correspond à votre recherche.</p>
+            <p className="font-display text-xl font-semibold text-white">Aucun produit ne correspond à votre recherche.</p>
             <p className="mt-3 max-w-md text-sm text-mist">
               Nos arrivages changent chaque semaine. Dites-nous ce que vous cherchez, nous vous répondons sur WhatsApp.
             </p>

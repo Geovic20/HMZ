@@ -1,14 +1,14 @@
 import type { Metadata, Viewport } from "next";
-import { JetBrains_Mono, Manrope, Unbounded } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import { siteConfig } from "@/config/site";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import "./globals.css";
 
-const unbounded = Unbounded({ variable: "--font-unbounded", subsets: ["latin"], display: "swap" });
-const manrope = Manrope({ variable: "--font-manrope", subsets: ["latin"], display: "swap" });
-const jetbrains = JetBrains_Mono({ variable: "--font-jetbrains", subsets: ["latin"], display: "swap" });
+// Titres : Space Grotesk (SemiBold / Bold). Texte et interface : Inter (Regular → Bold).
+const spaceGrotesk = Space_Grotesk({ variable: "--font-space-grotesk", subsets: ["latin"], weight: ["600", "700"], display: "swap" });
+const inter = Inter({ variable: "--font-inter", subsets: ["latin"], display: "swap" });
 
 const title = "Hamza Tech Store | iPhone, Smartphones, Tablettes & Troc au Bénin";
 
@@ -38,7 +38,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="fr" className={`${unbounded.variable} ${manrope.variable} ${jetbrains.variable} antialiased`}>
+    <html lang="fr" className={`${spaceGrotesk.variable} ${inter.variable} antialiased`}>
       <body className="flex min-h-dvh flex-col">
         <noscript>
           <style>{`[data-reveal]{opacity:1!important;transform:none!important}`}</style>

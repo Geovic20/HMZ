@@ -15,7 +15,7 @@ export function TradeSection() {
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
             <p className="eyebrow mb-4">Le troc Hamza</p>
-            <h2 id="trade-title" className="font-display text-[1.9rem] leading-[1.08] font-medium tracking-tight text-balance text-white sm:text-[2.6rem]">
+            <h2 id="trade-title" className="font-display text-[1.9rem] leading-[1.08] font-bold tracking-[-0.025em] text-balance text-white sm:text-[2.6rem]">
               Passez à votre prochain modèle
             </h2>
             <p className="mt-5 max-w-md text-base leading-relaxed text-mist sm:text-lg">
@@ -46,7 +46,7 @@ export function TradeSection() {
                   highlight: true,
                   visual: (
                     <div className="flex h-full w-full items-center justify-center">
-                      <span className="font-display text-5xl text-cyan">+</span>
+                      <span className="font-display text-5xl font-semibold text-cyan">+</span>
                     </div>
                   ),
                 },

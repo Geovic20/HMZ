@@ -21,7 +21,7 @@ export function Hero() {
           </p>
           <h1
             id="hero-title"
-            className="font-display text-[2.6rem] leading-[1.02] font-medium tracking-[-0.03em] text-balance text-white sm:text-6xl lg:text-[4.4rem]"
+            className="font-display text-[2.6rem] leading-[1.02] font-bold tracking-[-0.035em] text-balance text-white sm:text-6xl lg:text-[4.4rem]"
           >
             Votre prochain <span className="bg-gradient-to-r from-electric via-[#2fa6ff] to-cyan bg-clip-text text-transparent">iPhone</span>{" "}
             commence ici.
@@ -40,7 +40,7 @@ export function Hero() {
               Faire un troc
             </ButtonLink>
           </div>
-          <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-2 font-mono text-[0.72rem] tracking-wide text-mist uppercase">
+          <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-[0.72rem] tracking-wide text-mist uppercase">
             <li>Produits authentiques</li>
             <li aria-hidden="true" className="text-line">
               /
@@ -64,7 +64,7 @@ export function Hero() {
             <ProductVisual kind="phone-pro" tint="#C9772E" alt="" priority />
           </div>
           <div className="absolute bottom-[12%] left-[0%] rounded-2xl border border-white/10 bg-panel/80 px-4 py-3 backdrop-blur-md sm:left-[4%]">
-            <p className="font-mono text-[0.65rem] tracking-[0.14em] text-mist uppercase">Troc</p>
+            <p className="text-[0.65rem] tracking-[0.14em] text-mist uppercase">Troc</p>
             <p className="mt-1 flex items-center gap-2 text-sm font-semibold text-white">
               Ancien <ArrowRight className="h-3.5 w-3.5 text-cyan" /> Nouveau
             </p>

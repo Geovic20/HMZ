@@ -25,8 +25,8 @@ export function Logo({ onClick }: { onClick?: () => void }) {
     <Link href="/" onClick={onClick} className="group flex items-center gap-2.5" aria-label={`${siteConfig.name} — Accueil`}>
       <LogoMark />
       <span className="flex flex-col leading-none">
-        <span className="font-display text-[0.95rem] font-semibold tracking-tight text-white">HAMZA</span>
-        <span className="mt-1 font-mono text-[0.6rem] tracking-[0.28em] text-mist uppercase">Tech Store</span>
+        <span className="font-display text-[1.05rem] font-bold tracking-[-0.01em] text-white">HAMZA</span>
+        <span className="mt-1 text-[0.6rem] font-medium tracking-[0.28em] text-mist uppercase">Tech Store</span>
       </span>
     </Link>
   );
