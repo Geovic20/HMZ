@@ -15,22 +15,22 @@ export function Hero() {
 
       <div className="container-x grid items-center gap-8 pt-8 pb-10 sm:pt-16 sm:pb-16 lg:min-h-[calc(100svh-4.5rem)] lg:grid-cols-[1.1fr_1fr] lg:gap-6 lg:pt-6 lg:pb-20">
         <div className="relative z-10">
-          <p className="eyebrow mb-6 flex items-center gap-2">
+          <p className="eyebrow mb-6 flex animate-fade-up items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-cyan shadow-[0_0_10px_2px_rgba(0,217,255,0.6)]" />
             Cotonou · Livraison partout au Bénin
           </p>
           <h1
             id="hero-title"
-            className="font-display text-[2.6rem] leading-[1.02] font-bold tracking-[-0.035em] text-balance text-white sm:text-6xl lg:text-[4.4rem]"
+            className="animate-fade-up font-display text-[2.6rem] leading-[1.02] [animation-delay:90ms] font-bold tracking-[-0.035em] text-balance text-white sm:text-6xl lg:text-[4.4rem]"
           >
             Votre prochain <span className="bg-gradient-to-r from-electric via-[#2fa6ff] to-cyan bg-clip-text text-transparent">iPhone</span>{" "}
             commence ici.
           </h1>
-          <p className="mt-6 max-w-lg text-base leading-relaxed text-pretty text-mist sm:text-lg">
+          <p className="mt-6 max-w-lg animate-fade-up text-base [animation-delay:180ms] leading-relaxed text-pretty text-mist sm:text-lg">
             Téléphones, tablettes, accessoires et véhicules. Achetez, échangez et profitez d&apos;un service rapide et fiable partout au
             Bénin.
           </p>
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-9 flex animate-fade-up flex-col gap-3 [animation-delay:270ms] sm:flex-row">
             <ButtonLink href="/catalogue" size="lg">
               Voir le catalogue
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -40,7 +40,7 @@ export function Hero() {
               Faire un troc
             </ButtonLink>
           </div>
-          <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-[0.72rem] tracking-wide text-mist uppercase">
+          <ul className="mt-10 flex animate-fade-up flex-wrap [animation-delay:360ms] gap-x-6 gap-y-2 text-[0.72rem] tracking-wide text-mist uppercase">
             <li>Produits authentiques</li>
             <li aria-hidden="true" className="text-line">
               /
@@ -57,13 +57,17 @@ export function Hero() {
         <div className="relative mx-auto aspect-square w-full max-w-[320px] sm:max-w-[440px] lg:max-w-[520px]" aria-hidden="true">
           <div className="absolute inset-[12%] rounded-full border border-white/[0.06]" />
           <div className="absolute inset-[24%] rounded-full border border-cyan/10" />
-          <div className="absolute top-[4%] left-[2%] w-[62%] -rotate-[9deg] drop-shadow-[0_30px_40px_rgba(0,0,0,0.6)]">
-            <ProductVisual kind="phone-pro" tint="#3E4552" alt="" priority />
+          <div className="absolute top-[4%] left-[2%] w-[62%] -rotate-[9deg] animate-rise-in drop-shadow-[0_30px_40px_rgba(0,0,0,0.6)] [animation-delay:250ms]">
+            <div className="animate-float [animation-delay:1.4s]">
+              <ProductVisual kind="phone-pro" tint="#3E4552" alt="" priority />
+            </div>
           </div>
-          <div className="absolute right-[0%] bottom-[2%] w-[66%] rotate-[7deg] drop-shadow-[0_40px_50px_rgba(0,0,0,0.7)]">
-            <ProductVisual kind="phone-pro" tint="#C9772E" alt="" priority />
+          <div className="absolute right-[0%] bottom-[2%] w-[66%] rotate-[7deg] animate-rise-in drop-shadow-[0_40px_50px_rgba(0,0,0,0.7)] [animation-delay:400ms]">
+            <div className="animate-float [animation-delay:-3.5s]">
+              <ProductVisual kind="phone-pro" tint="#C9772E" alt="" priority />
+            </div>
           </div>
-          <div className="absolute bottom-[12%] left-[0%] rounded-2xl border border-white/10 bg-panel/80 px-4 py-3 backdrop-blur-md sm:left-[4%]">
+          <div className="absolute bottom-[12%] left-[0%] animate-fade-up rounded-2xl [animation-delay:800ms] border border-white/10 bg-panel/80 px-4 py-3 backdrop-blur-md sm:left-[4%]">
             <p className="text-[0.65rem] tracking-[0.14em] text-mist uppercase">Troc</p>
             <p className="mt-1 flex items-center gap-2 text-sm font-semibold text-white">
               Ancien <ArrowRight className="h-3.5 w-3.5 text-cyan" /> Nouveau

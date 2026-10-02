@@ -7,6 +7,7 @@ import { findTradeOffer, listModels } from "@/lib/trade";
 import { formatPrice } from "@/lib/format";
 import { tradeMessage, whatsappLink } from "@/lib/whatsapp";
 import { WhatsAppIcon } from "@/components/ui/icons";
+import { AnimatedNumber } from "@/components/ui/AnimatedNumber";
 
 interface TradeCalculatorProps {
   offers: TradeOffer[];
@@ -63,11 +64,11 @@ export function TradeCalculator({ offers, defaultCurrent, defaultDesired }: Trad
       {/* Résultat */}
       <div className="border-t border-line bg-gradient-to-b from-electric/[0.08] to-transparent p-6 sm:p-10" aria-live="polite">
         {offer ? (
-          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div key="offer" className="flex animate-fade-up flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="eyebrow">Complément estimatif</p>
               <p className="mt-3 text-[2.2rem] leading-none font-bold tabular-nums tracking-[-0.02em] min-[400px]:text-[2.6rem] text-white sm:text-6xl">
-                {formatPrice(offer.supplement)}
+                <AnimatedNumber value={offer.supplement} format={formatPrice} />
               </p>
               <p className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-mist">
                 <span>
@@ -89,7 +90,7 @@ export function TradeCalculator({ offers, defaultCurrent, defaultDesired }: Trad
             </a>
           </div>
         ) : (
-          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div key={sameModel ? "same" : "none"} className="flex animate-fade-up flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div className="flex items-start gap-4">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-cyan">
                 <MessageCircleQuestion className="h-5 w-5" aria-hidden="true" />

@@ -164,9 +164,10 @@ export function CatalogueView({ products, categories }: CatalogueViewProps) {
       {/* Grille */}
       <div id="product-grid" role="tabpanel" className="mt-4">
         {filtered.length > 0 ? (
-          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {filtered.map((p) => (
-              <li key={p.id}>
+          // La clé relance l'animation d'entrée à chaque changement de catégorie, de tri ou de disponibilité.
+          <ul key={`${activeCategory}-${sort}-${onlyAvailable}`} className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {filtered.map((p, i) => (
+              <li key={p.id} className="animate-fade-up" style={{ animationDelay: `${Math.min(i, 8) * 50}ms` }}>
                 <ProductCard product={p} />
               </li>
             ))}

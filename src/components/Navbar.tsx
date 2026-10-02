@@ -90,11 +90,15 @@ export function Navbar() {
       <div
         id="mobile-menu"
         hidden={!open}
-        className="h-[calc(100dvh-4rem)] overflow-y-auto border-t border-white/[0.06] bg-ink md:hidden"
+        className="h-[calc(100dvh-4rem)] animate-menu-in overflow-y-auto border-t border-white/[0.06] bg-ink md:hidden"
       >
         <ul className="container-x flex flex-col pt-4">
-          {siteConfig.nav.map((item) => (
-            <li key={item.href} className="border-b border-white/[0.06]">
+          {siteConfig.nav.map((item, i) => (
+            <li
+              key={item.href}
+              className="animate-fade-up border-b border-white/[0.06]"
+              style={{ animationDelay: `${80 + i * 60}ms` }}
+            >
               <Link
                 href={item.href}
                 onClick={close}
@@ -107,7 +111,7 @@ export function Navbar() {
             </li>
           ))}
         </ul>
-        <div className="container-x mt-8 flex flex-col gap-3 pb-10">
+        <div className="container-x mt-8 flex animate-fade-up flex-col gap-3 pb-10 [animation-delay:280ms]">
           <a
             href={whatsappLink()}
             target="_blank"
